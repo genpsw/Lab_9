@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Book Management</h1>
+
+    <!-- form now posts to JSON API -->
+    <form action="/api/books/add" method="POST">
+      <!-- TODO 12: input name must be "bookNam e" -->
+       
+      <input type="text" name="bookName" placeholder="Book name" required />
+      <button type="submit">Add</button>
+     
+    </form>
+
+    <h2>Search Books</h2>
+    <div>
+      <input type="text" id="search-input" placeholder="Search by book name" />
+      <button onclick="searchBooks()">Search</button>
+      <button onclick="loadBooks()">Show All</button>
+    </div>
+
+    <h2>Book List</h2>
+    <div id="book-list"></div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
